@@ -31,7 +31,7 @@ export default {
 
         const response = await fetch(wechat_work_url + key.access_token, push)
         const result = await response.json()
-        console.log(JSON.stringify(result))
+        //console.log(JSON.stringify(result))
         return new Response(result, push)
       }
       // 1. 验证签名
@@ -81,7 +81,7 @@ const extractTagContent = (tag, xml) => {
 
 function parseXml(xml) {
   const fromUser = extractTagContent("FromUserName", xml)
-  console.log(fromUser)
+  //console.log(fromUser)
   const toUser = extractTagContent("ToUserName", xml)
   const content = extractTagContent("Content", xml)
   const type = extractTagContent("MsgType", xml)
